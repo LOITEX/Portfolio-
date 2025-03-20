@@ -1,0 +1,11 @@
+const express = require('express');
+const cors = require('cors');
+const connectDB = require('./config/db');
+const studentRoutes = require('./routes/studentRoutes');
+const teacherRoutes = require('./routes/teacherRoutes');
+app.use(cors());
+app.use(package.json);
+app.use('./api/student', studentRoutes);
+app,use('./api/teachers', teacherRoutes);
+connectDB();
+module.exports = app;
